@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DA.lib.MVVM.Framework", "DA.lib.MVVM.Framework\DA.lib.MVVM.Framework.csproj", "{4E445865-0D5D-4E58-8705-46758841C1B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commons", "Commons\Commons.csproj", "{3416A077-5B91-42B0-AC62-3B6341EA3F66}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DA.lib.Commons", "Commons\DA.lib.Commons.csproj", "{3416A077-5B91-42B0-AC62-3B6341EA3F66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
