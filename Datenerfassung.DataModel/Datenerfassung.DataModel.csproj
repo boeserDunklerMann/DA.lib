@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3416A077-5B91-42B0-AC62-3B6341EA3F66}</ProjectGuid>
+    <ProjectGuid>{6A2A95CC-F18A-49D6-BD75-90D80D246F7A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Commons</RootNamespace>
-    <AssemblyName>Commons</AssemblyName>
+    <RootNamespace>Datenerfassung.DataModel</RootNamespace>
+    <AssemblyName>Datenerfassung.DataModel</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,18 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContractBinder.cs" />
+    <Compile Include="AddressEntry.cs" />
+    <Compile Include="AdressEntryType.cs" />
+    <Compile Include="DataBase.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\IO.Declarations\IO.Declarations.csproj">
-      <Project>{4be06942-4978-477b-94f0-a1513247132d}</Project>
-      <Name>IO.Declarations</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\IO.Implementation\IO.Implementation.csproj">
-      <Project>{bbbe8c29-714a-4ace-9d57-8f158c7f5091}</Project>
-      <Name>IO.Implementation</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

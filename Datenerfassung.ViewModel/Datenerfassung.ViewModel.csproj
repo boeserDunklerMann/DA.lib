@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3416A077-5B91-42B0-AC62-3B6341EA3F66}</ProjectGuid>
+    <ProjectGuid>{7D648574-637F-4DA1-B680-B14C678D4699}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Commons</RootNamespace>
-    <AssemblyName>Commons</AssemblyName>
+    <RootNamespace>Datenerfassung.ViewModel</RootNamespace>
+    <AssemblyName>Datenerfassung.ViewModel</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,17 +41,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContractBinder.cs" />
+    <Compile Include="Presenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Commons\DA.lib.Commons.csproj">
+      <Project>{3416a077-5b91-42b0-ac62-3b6341ea3f66}</Project>
+      <Name>DA.lib.Commons</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DA.lib.MVVM.Framework\DA.lib.MVVM.Framework.csproj">
+      <Project>{4e445865-0d5d-4e58-8705-46758841c1b7}</Project>
+      <Name>DA.lib.MVVM.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Datenerfassung.DataModel\Datenerfassung.DataModel.csproj">
+      <Project>{6A2A95CC-F18A-49D6-BD75-90D80D246F7A}</Project>
+      <Name>Datenerfassung.DataModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IO.Declarations\IO.Declarations.csproj">
       <Project>{4be06942-4978-477b-94f0-a1513247132d}</Project>
       <Name>IO.Declarations</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\IO.Implementation\IO.Implementation.csproj">
-      <Project>{bbbe8c29-714a-4ace-9d57-8f158c7f5091}</Project>
-      <Name>IO.Implementation</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

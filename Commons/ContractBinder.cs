@@ -15,7 +15,6 @@ namespace Commons
 
 		private static void Bind(Type InterfaceType, Type ImplementationType)
 		{
-			// DONE: prüfen, dass es das Interface noch nicht im Container ist, das darfs ja nur einmal geben.
 			Tuple<Type, Type> item = new Tuple<Type, Type>(InterfaceType, ImplementationType);
 			_container.Add(item);
 			_nCounter++;
@@ -25,6 +24,8 @@ namespace Commons
 		{
 			//Bind(typeof(IFinanceSerializer), typeof(JsonSerializer));
 			//Bind(typeof(IDataAccessor), typeof(MySqlAccessor));
+			Bind(typeof(IO.Declarations.IStorage), typeof(IO.Implementation.FileStorage));
+			Bind(typeof(IO.Declarations.ISerializer), typeof(IO.Implementation.JsonSerialize));
 		}
 
 		public static TInterface GetObject<TInterface>()
